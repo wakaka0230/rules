@@ -1,0 +1,428 @@
+;预配置作者
+;毒奶博主
+;limbopro.com
+;08.28.2021 更新   
+;https://t.me/limboprossr 关注更新
+;https://t.me/Adblock4limbo 群组反馈与讨论交流
+
+[general]
+
+#解析器作者 @XIAO_KOP 
+resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
+
+#IP_API 改自 @XIAO_KOP
+geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/limbopro/QuantumultX/master/Scripts/IP_API.js
+
+
+[dns]
+server=223.5.5.5
+server=114.114.114.114
+server=119.29.29.29
+server=8.8.8.8
+
+
+[policy]
+
+static=✍️ Proxy, 
+static=🇭🇰 Hong Kong, 
+static=🇨🇳 Taiwan, 
+static=🇸🇬 Singapore, 
+static=🇯🇵 Japan, 
+static=🇰🇷 Korea, 
+static=🇺🇲 United States, 
+static=🏳️‍🌈 Other, 
+static=📲 社交媒体, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, DIRECT, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Telegram.png
+static=🎙 Discord, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, DIRECT
+static=🧩 Emby, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, DIRECT
+static=📹 油管视频, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, DIRECT
+static=🎥 Netflix, 🇸🇬 Singapore, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, DIRECT, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/Netflix_Letter.png
+static=🖥 Twitch, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, DIRECT
+static=🦄 DISNEY+, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, DIRECT
+static=📺 niconico, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, DIRECT
+static=📺 巴哈姆特, 🇨🇳 Taiwan, 🚀 Choose Proxy, ✍️ Proxy, DIRECT
+static=🧑‍🎤 TikTok, 🇰🇷 Korea, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, DIRECT
+static=🔞 Pornhub, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, DIRECT
+static=📒 Pixiv, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, DIRECT
+static=🌍 国外媒体, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, DIRECT, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/GlobalMedia.png
+static=🌏 国内媒体, DIRECT, 🇨🇳 Taiwan, 🇭🇰 Hong Kong, 🚀 Choose Proxy, ✍️ Proxy, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/DomesticMedia.png
+static=⏳ 各测速网站, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, DIRECT
+static=Ⓜ️ 微软云盘, DIRECT, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy
+static=Ⓜ️ 微软服务, DIRECT, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Microsoft.png
+static=🍎 苹果服务, DIRECT, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Apple.png
+static=🎵 Spotify, 🇺🇲 United States, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy, DIRECT
+static=🎮 Steam游戏平台, DIRECT, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy
+static=🎮 Epic游戏平台, DIRECT, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy
+static=🎮 Sony游戏平台, DIRECT, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, 🚀 Choose Proxy, ✍️ Proxy
+static=🎯 全球直连, DIRECT, 🚀 Choose Proxy, ✍️ Proxy, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Direct.png
+static=🛑 广告拦截, REJECT, DIRECT,  img-url=https://raw.githubusercontent.com/limbopro/Qure/master/IconSet/Advertising.png
+static=🐟 漏网之鱼, 🚀 Choose Proxy, ✍️ Proxy, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, DIRECT, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Final.png
+
+[server_remote]
+# https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/unlesssub.txt, tag=无用节点（❌请不要动它）, enabled=false
+# 无用订阅（请勿删除）
+
+[filter_remote]
+https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/airports.list, tag=机场专线, force-policy=📲 社交媒体, enabled=true
+https://limbopro.com/Adblock4limbo.list, tag=毒奶特供, force-policy=🛑 广告拦截, enabled=true
+https://raw.githubusercontent.com/NobyDa/ND-AD/master/QuantumultX/AD_Block.txt, tag=野比(4W+), force-policy=🛑 广告拦截, enabled=true
+https://raw.githubusercontent.com/NobyDa/ND-AD/master/QuantumultX/AD_Block_Plus.txt, tag=野比(6W+), force-policy=🛑 广告拦截, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Extra/Apple/BlockiOSUpdate.list, tag=禁止🚫🍎更新, force-policy=🛑 广告拦截, update-interval=86400, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/StreamingMedia/Video/Netflix.list, tag=Netflix, force-policy=🎥 Netflix, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/StreamingMedia/Streaming.list, tag=其他国外流媒体, force-policy=🌍 国外媒体, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Global.list, tag=社交媒体, force-policy=📲 社交媒体, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Extra/Apple/Apple.list, tag=苹果服务, force-policy=🍎 苹果服务, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/China.list, tag=大陆媒体, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Extra/ChinaIP.list, tag=GEOIP(CN), enabled=true
+
+[rewrite_remote]
+https://limbopro.com/Adblock4limbo.conf, tag=毒奶特供, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/YouTubeAds.conf, tag=DivineEngine (Youtube AdsBlock), enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/Advertising.conf, tag=DivineEngine (Advertising), enabled=true
+#https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Rewrite.conf, tag=ConnersHua （DivineEngine Rewrite）, enabled=true
+https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf, tag=NoByDa（lhie1 Rewrite）, enabled=false
+https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js.conf, tag=NoByDa（NoByDa Rewrite）, enabled=true
+https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/tiktok.conf, tag=TikTok ublock, enabled=true
+
+[server_local]
+shadowsocks=example.com:80, method=aes-128-gcm, password=pwd, obfs=ws, fast-open=false, tag=无用节点1
+shadowsocks=example.com:80, method=aes-128-gcm, password=pwd, obfs=ws, fast-open=false, tag=无用节点2
+
+[filter_local]
+geoip, cn, direct
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 224.0.0.0/24, direct
+
+DOMAIN-KEYWORD,emby,🧩 Emby
+DOMAIN-KEYWORD,odysseyplus,🧩 Emby
+DOMAIN-KEYWORD,emby.wtf,🧩 Emby
+DOMAIN-KEYWORD,jmaooo.com,🧩 Emby
+DOMAIN-KEYWORD,xeton.dev,🧩 Emby
+DOMAIN-SUFFIX,emby.nexitally.com,🧩 Emby
+DOMAIN-SUFFIX,https://emby.immtel.com,🧩 Emby
+DOMAIN-SUFFIX,line.emby.men,🧩 Emby
+DOMAIN-SUFFIX,emby.cjpc.xyz,🧩 Emby
+DOMAIN-SUFFIX,emby.paoche.ooo,🧩 Emby
+DOMAIN-SUFFIX,emby.flowercloud.yt,🧩 Emby
+DOMAIN-SUFFIX,emby.maying.club,🧩 Emby
+DOMAIN-SUFFIX,emby.mdss.cloud,🧩 Emby
+DOMAIN-SUFFIX,emby.ytoo.li,🧩 Emby
+DOMAIN-SUFFIX,embyserver.ga,🧩 Emby
+DOMAIN-SUFFIX,emby.prprcloud.com,🧩 Emby
+DOMAIN-SUFFIX,emby.nyancat.net,🧩 Emby
+DOMAIN-SUFFIX,emby.plusmedia.site,🧩 Emby
+DOMAIN-SUFFIX,emby-cf.plusmedia.site ,🧩 Emby
+DOMAIN-SUFFIX,emby.xeton.dev,🧩 Emby
+DOMAIN-SUFFIX,jellyfin.xeton.dev,🧩 Emby
+DOMAIN-SUFFIX,movie.xeton.dev,🧩 Emby
+DOMAIN-SUFFIX,servers.xeton.dev,🧩 Emby
+DOMAIN-SUFFIX,emby.ok.edu.hk,🧩 Emby
+DOMAIN-SUFFIX,emby.neko.edu.rs ,🧩 Emby
+DOMAIN-SUFFIX,pub1.emby.wtf,🧩 Emby
+DOMAIN-SUFFIX,pub1cf.emby.wtf,🧩 Emby
+DOMAIN-SUFFIX,pub2.emby.wtf,🧩 Emby
+DOMAIN-SUFFIX,pub2cf.emby.wtf,🧩 Emby
+DOMAIN-SUFFIX,pub3.emby.wtf,🧩 Emby
+DOMAIN-SUFFIX,pub3cf.emby.wtf,🧩 Emby
+DOMAIN-SUFFIX,agahk1.jmsooo.com,🧩 Emby
+DOMAIN-SUFFIX,agasg1.jmsooo.com,🧩 Emby
+DOMAIN-SUFFIX,agajp1.jmsooo.com,🧩 Emby
+DOMAIN-SUFFIX,aws.jmsooo.com,🧩 Emby
+DOMAIN-SUFFIX,ntt1.jmsooo.com,🧩 Emby
+DOMAIN-SUFFIX,hinet.jmsooo.com,🧩 Emby
+DOMAIN-SUFFIX,cf1.jmsooo.com,🧩 Emby
+DOMAIN-SUFFIX,https://Pornemby.club,🧩 Emby
+DOMAIN-SUFFIX,https://hk.pornemby.club,🧩 Emby
+DOMAIN-SUFFIX,https://us.pornemby.club,🧩 Emby
+DOMAIN-SUFFIX,fast.com,⏳ 各测速网站
+DOMAIN-KEYWORD,speedtest,⏳ 各测速网站
+DOMAIN-SUFFIX,ooklaserver.net,⏳ 各测速网站
+DOMAIN-SUFFIX,speed.cloudflare.com,⏳ 各测速网站
+DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
+DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
+DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
+DOMAIN-SUFFIX,local,🎯 全球直连
+DOMAIN-SUFFIX,localhost,🎯 全球直连
+IP-CIDR,10.0.0.0/8,🎯 全球直连,no-resolve
+IP-CIDR,100.64.0.0/10,🎯 全球直连,no-resolve
+IP-CIDR,127.0.0.0/8,🎯 全球直连,no-resolve
+IP-CIDR,172.16.0.0/12,🎯 全球直连,no-resolve
+IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
+IP-CIDR,198.18.0.0/16,🎯 全球直连,no-resolve
+IP6-CIDR,::1/128,🎯 全球直连,no-resolve
+IP6-CIDR,fc00::/7,🎯 全球直连,no-resolve
+IP6-CIDR,fe80::/10,🎯 全球直连,no-resolve
+IP6-CIDR,fd00::/8,🎯 全球直连,no-resolve
+DOMAIN,router.asus.com,🎯 全球直连
+DOMAIN-SUFFIX,hiwifi.com,🎯 全球直连
+DOMAIN-SUFFIX,leike.cc,🎯 全球直连
+DOMAIN-SUFFIX,miwifi.com,🎯 全球直连
+DOMAIN-SUFFIX,my.router,🎯 全球直连
+DOMAIN-SUFFIX,p.to,🎯 全球直连
+DOMAIN-SUFFIX,peiluyou.com,🎯 全球直连
+DOMAIN-SUFFIX,phicomm.me,🎯 全球直连
+DOMAIN-SUFFIX,routerlogin.com,🎯 全球直连
+DOMAIN-SUFFIX,tendawifi.com,🎯 全球直连
+DOMAIN-SUFFIX,zte.home,🎯 全球直连
+DOMAIN-SUFFIX,ol.epicgames.com,🎯 全球直连
+DOMAIN-SUFFIX,dizhensubao.getui.com,🎯 全球直连
+DOMAIN,dl.google.com,🎯 全球直连
+DOMAIN-SUFFIX,googletraveladservices.com,🎯 全球直连
+DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net,🎯 全球直连
+DOMAIN,origin-a.akamaihd.net,🎯 全球直连
+DOMAIN,fairplay.l.qq.com,🎯 全球直连
+DOMAIN,livew.l.qq.com,🎯 全球直连
+DOMAIN,vd.l.qq.com,🎯 全球直连
+DOMAIN,analytics.strava.com,🎯 全球直连
+DOMAIN,msg.umeng.com,🎯 全球直连
+DOMAIN,msg.umengcloud.com,🎯 全球直连
+DOMAIN,tracking.miui.com,🎯 全球直连
+DOMAIN,app.adjust.com,🎯 全球直连
+DOMAIN,bdtj.tagtic.cn,🎯 全球直连
+USER-AGENT,OneDrive*,Ⓜ️ 微软云盘
+USER-AGENT,OneDriveiOSApp*,Ⓜ️ 微软云盘
+DOMAIN-KEYWORD,1drv,Ⓜ️ 微软云盘
+DOMAIN-KEYWORD,onedrive,Ⓜ️ 微软云盘
+DOMAIN-KEYWORD,skydrive,Ⓜ️ 微软云盘
+DOMAIN-SUFFIX,livefilestore.com,Ⓜ️ 微软云盘
+DOMAIN-SUFFIX,oneclient.sfx.ms,Ⓜ️ 微软云盘
+DOMAIN-SUFFIX,onedrive.com,Ⓜ️ 微软云盘
+DOMAIN-SUFFIX,onedrive.live.com,Ⓜ️ 微软云盘
+DOMAIN-SUFFIX,photos.live.com,Ⓜ️ 微软云盘
+DOMAIN-SUFFIX,sharepoint.com,Ⓜ️ 微软云盘
+DOMAIN-SUFFIX,sharepointonline.com,Ⓜ️ 微软云盘
+DOMAIN-SUFFIX,skydrive.wns.windows.com,Ⓜ️ 微软云盘
+DOMAIN-SUFFIX,spoprod-a.akamaihd.net,Ⓜ️ 微软云盘
+DOMAIN-SUFFIX,storage.live.com,Ⓜ️ 微软云盘
+DOMAIN-SUFFIX,storage.msn.com,Ⓜ️ 微软云盘
+DOMAIN-KEYWORD,1drv,Ⓜ️ 微软服务
+DOMAIN-KEYWORD,microsoft,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,aadrm.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,acompli.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,acompli.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,aka.ms,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,akadns.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,aspnetcdn.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,assets-yammer.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,azure.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,azure.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,azureedge.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,azurerms.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,bing.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,cloudapp.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,cloudappsecurity.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,edgesuite.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,gfx.ms,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,hotmail.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,live.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,live.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,lync.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,msappproxy.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,msauth.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,msauthimages.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,msecnd.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,msedge.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,msft.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,msftauth.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,msftauthimages.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,msftidentity.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,msidentity.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,msn.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,msocdn.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,msocsp.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,mstea.ms,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,o365weve.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,oaspapps.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,office.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,office.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,office365.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,officeppe.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,omniroot.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,onedrive.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,onenote.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,onenote.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,onestore.ms,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,outlook.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,outlookmobile.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,phonefactor.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,public-trust.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,sfbassets.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,sfx.ms,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,sharepoint.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,sharepointonline.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,skype.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,skypeassets.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,skypeforbusiness.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,staffhub.ms,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,svc.ms,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,sway-cdn.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,sway-extensions.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,sway.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,trafficmanager.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,uservoice.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,virtualearth.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,visualstudio.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,windows-ppe.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,windows.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,windows.net,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,windowsazure.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,windowsupdate.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,wunderlist.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,yammer.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,yammerusercontent.com,Ⓜ️ 微软服务
+DOMAIN-SUFFIX,t.me,📲 电报消息
+DOMAIN-SUFFIX,tdesktop.com,📲 电报消息
+DOMAIN-SUFFIX,telegra.ph,📲 电报消息
+DOMAIN-SUFFIX,telegram.me,📲 电报消息
+DOMAIN-SUFFIX,telegram.org,📲 电报消息
+DOMAIN-SUFFIX,telesco.pe,📲 电报消息
+IP-CIDR,91.108.0.0/16,📲 电报消息,no-resolve
+IP-CIDR,109.239.140.0/24,📲 电报消息,no-resolve
+IP-CIDR,149.154.160.0/20,📲 电报消息,no-resolve
+IP6-CIDR,2001:67c:4e8::/48,📲 电报消息,no-resolve
+IP6-CIDR,2001:b28:f23d::/48,📲 电报消息,no-resolve
+IP6-CIDR,2001:b28:f23f::/48,📲 电报消息,no-resolve
+DOMAIN-SUFFIX,discord.co,🎙 Discord
+DOMAIN-SUFFIX,discord.com,🎙 Discord
+DOMAIN-SUFFIX,discord.gg,🎙 Discord
+DOMAIN-SUFFIX,discord.media,🎙 Discord
+DOMAIN-SUFFIX,discordapp.com,🎙 Discord
+DOMAIN-SUFFIX,discordapp.net,🎙 Discord
+USER-AGENT,Spotify*,🎵 Spotify
+DOMAIN-KEYWORD,-spotify-com,🎵 Spotify
+DOMAIN-KEYWORD,spotify.com,🎵 Spotify
+DOMAIN-SUFFIX,pscdn.co,🎵 Spotify
+DOMAIN-SUFFIX,scdn.co,🎵 Spotify
+DOMAIN-SUFFIX,spoti.fi,🎵 Spotify
+DOMAIN-SUFFIX,spotify.com,🎵 Spotify
+DOMAIN-SUFFIX,spotifycdn.com,🎵 Spotify
+DOMAIN-SUFFIX,spotifycdn.net,🎵 Spotify
+DOMAIN-SUFFIX,epicgames.com,🎮 Epic游戏平台
+DOMAIN-SUFFIX,helpshift.com,🎮 Epic游戏平台
+DOMAIN-SUFFIX,paragon.com,🎮 Epic游戏平台
+DOMAIN-SUFFIX,unrealengine.com,🎮 Epic游戏平台
+DOMAIN-SUFFIX,playstation.com,🎮 Sony游戏平台
+DOMAIN-SUFFIX,playstation.net,🎮 Sony游戏平台
+DOMAIN-SUFFIX,playstationnetwork.com,🎮 Sony游戏平台
+DOMAIN-SUFFIX,sony.com,🎮 Sony游戏平台
+DOMAIN-SUFFIX,sonyentertainmentnetwork.com,🎮 Sony游戏平台
+DOMAIN-SUFFIX,fanatical.com,🎮 Steam游戏平台
+DOMAIN-SUFFIX,humblebundle.com,🎮 Steam游戏平台
+DOMAIN-SUFFIX,steamcommunity.com,🎮 Steam游戏平台
+USER-AGENT,Disney*,🦄 DISNEY+
+USER-AGENT,Disney+*,🦄 DISNEY+
+DOMAIN,cdn.registerdisney.go.com,🦄 DISNEY+
+DOMAIN-SUFFIX,adobedtm.com,🦄 DISNEY+
+DOMAIN-SUFFIX,bam.nr-data.net,🦄 DISNEY+
+DOMAIN-SUFFIX,bamgrid.com,🦄 DISNEY+
+DOMAIN-SUFFIX,braze.com,🦄 DISNEY+
+DOMAIN-SUFFIX,cdn.optimizely.com,🦄 DISNEY+
+DOMAIN-SUFFIX,cdn.registerdisney.go.com,🦄 DISNEY+
+DOMAIN-SUFFIX,cws.conviva.com,🦄 DISNEY+
+DOMAIN-SUFFIX,d9.flashtalking.com,🦄 DISNEY+
+DOMAIN-SUFFIX,disney-plus.net,🦄 DISNEY+
+DOMAIN-SUFFIX,disney-portal.my.onetrust.com,🦄 DISNEY+
+DOMAIN-SUFFIX,disney.demdex.net,🦄 DISNEY+
+DOMAIN-SUFFIX,disney.my.sentry.io,🦄 DISNEY+
+DOMAIN-SUFFIX,disneyplus.bn5x.net,🦄 DISNEY+
+DOMAIN-SUFFIX,disneyplus.com,🦄 DISNEY+
+DOMAIN-SUFFIX,disneyplus.com.ssl.sc.omtrdc.net,🦄 DISNEY+
+DOMAIN-SUFFIX,disneystreaming.com,🦄 DISNEY+
+DOMAIN-SUFFIX,dssott.com,🦄 DISNEY+
+DOMAIN-SUFFIX,execute-api.us-east-1.amazonaws.com,🦄 DISNEY+
+DOMAIN-SUFFIX,js-agent.newrelic.com,🦄 DISNEY+
+DOMAIN-KEYWORD,ttvnw,🖥 Twitch
+DOMAIN-SUFFIX,jtvnw.net,🖥 Twitch
+DOMAIN-SUFFIX,ttvnw.net,🖥 Twitch
+DOMAIN-SUFFIX,twitch.tv,🖥 Twitch
+DOMAIN-SUFFIX,twitchcdn.net,🖥 Twitch
+DOMAIN-SUFFIX,phncdn.com,🔞 Pornhub
+DOMAIN-SUFFIX,phprcdn.com,🔞 Pornhub
+DOMAIN-SUFFIX,pornhub.com,🔞 Pornhub
+DOMAIN-SUFFIX,pornhubpremium.com,🔞 Pornhub
+DOMAIN-SUFFIX,pixiv.net,📒 Pixiv
+DOMAIN-SUFFIX,pximg.net,📒 Pixiv
+USER-AGENT,Niconico*,📺 niconico
+DOMAIN-SUFFIX,dmc.nico,📺 niconico
+DOMAIN-SUFFIX,nicovideo.jp,📺 niconico
+DOMAIN-SUFFIX,nimg.jp,📺 niconico
+USER-AGENT,Anime*,📺 巴哈姆特
+DOMAIN,gamer-cds.cdn.hinet.net,📺 巴哈姆特
+DOMAIN,gamer2-cds.cdn.hinet.net,📺 巴哈姆特
+DOMAIN-SUFFIX,bahamut.com.tw,📺 巴哈姆特
+DOMAIN-SUFFIX,gamer.com.tw,📺 巴哈姆特
+DOMAIN-SUFFIX,hinet.net,📺 巴哈姆特
+USER-AGENT,TikTok*,🧑‍🎤 TikTok
+DOMAIN-KEYWORD,-tiktokcdn-com,🧑‍🎤 TikTok
+DOMAIN-SUFFIX,byteoversea.com,🧑‍🎤 TikTok
+DOMAIN-SUFFIX,ibytedtos.com,🧑‍🎤 TikTok
+DOMAIN-SUFFIX,ipstatp.com,🧑‍🎤 TikTok
+DOMAIN-SUFFIX,muscdn.com,🧑‍🎤 TikTok
+DOMAIN-SUFFIX,musical.ly,🧑‍🎤 TikTok
+DOMAIN-SUFFIX,tik-tokapi.com,🧑‍🎤 TikTok
+DOMAIN-SUFFIX,tiktok.com,🧑‍🎤 TikTok
+DOMAIN-SUFFIX,tiktokcdn.com,🧑‍🎤 TikTok
+DOMAIN-SUFFIX,tiktokv.com,🧑‍🎤 TikTok
+USER-AGENT,*youtube*,📹 油管视频
+USER-AGENT,YouTube*,📹 油管视频
+USER-AGENT,com.google.ios.youtube*,📹 油管视频
+DOMAIN-KEYWORD,youtube,📹 油管视频
+DOMAIN,youtubei.googleapis.com,📹 油管视频
+DOMAIN,yt3.ggpht.com,📹 油管视频
+DOMAIN-SUFFIX,googlevideo.com,📹 油管视频
+DOMAIN-SUFFIX,gvt2.com,📹 油管视频
+DOMAIN-SUFFIX,youtu.be,📹 油管视频
+DOMAIN-SUFFIX,youtube.com,📹 油管视频
+DOMAIN-SUFFIX,ytimg.com,📹 油管视频
+USER-AGENT,Bilibili*,🌏 国内媒体
+USER-AGENT,bili*,🌏 国内媒体
+DOMAIN,upos-hz-mirrorakam.akamaized.net,🌏 国内媒体
+DOMAIN-SUFFIX,acg.tv,🌏 国内媒体
+DOMAIN-SUFFIX,acgvideo.com,🌏 国内媒体
+DOMAIN-SUFFIX,b23.tv,🌏 国内媒体
+DOMAIN-SUFFIX,bigfun.cn,🌏 国内媒体
+DOMAIN-SUFFIX,bigfunapp.cn,🌏 国内媒体
+DOMAIN-SUFFIX,biliapi.com,🌏 国内媒体
+DOMAIN-SUFFIX,biliapi.net,🌏 国内媒体
+DOMAIN-SUFFIX,bilibili.com,🌏 国内媒体
+DOMAIN-SUFFIX,bilibili.tv,🌏 国内媒体
+DOMAIN-SUFFIX,biligame.com,🌏 国内媒体
+DOMAIN-SUFFIX,biligame.net,🌏 国内媒体
+DOMAIN-SUFFIX,bilivideo.cn,🌏 国内媒体
+DOMAIN-SUFFIX,bilivideo.com,🌏 国内媒体
+DOMAIN-SUFFIX,hdslb.com,🌏 国内媒体
+DOMAIN-SUFFIX,im9.com,🌏 国内媒体
+DOMAIN-SUFFIX,smtcdns.net,🌏 国内媒体
+USER-AGENT,QYPlayer*,🌏 国内媒体
+USER-AGENT,iQIYI*,🌏 国内媒体
+DOMAIN,intel-cache.m.iqiyi.com,🌏 国内媒体
+DOMAIN,intel-cache.video.iqiyi.com,🌏 国内媒体
+DOMAIN,intl-rcd.iqiyi.com,🌏 国内媒体
+DOMAIN,intl-subscription.iqiyi.com,🌏 国内媒体
+DOMAIN-SUFFIX,inter.iqiyi.com,🌏 国内媒体
+DOMAIN-SUFFIX,inter.ptqy.gitv.tv,🌏 国内媒体
+DOMAIN-SUFFIX,intl.iqiyi.com,🌏 国内媒体
+DOMAIN-SUFFIX,iq.com,🌏 国内媒体
+IP-CIDR,23.40.241.251/32,🌏 国内媒体,no-resolve
+IP-CIDR,23.40.242.10/32,🌏 国内媒体,no-resolve
+IP-CIDR,103.44.56.0/22,🌏 国内媒体,no-resolve
+IP-CIDR,118.26.32.0/23,🌏 国内媒体,no-resolve
+IP-CIDR,118.26.120.0/24,🌏 国内媒体,no-resolve
+IP-CIDR,223.119.62.225/28,🌏 国内媒体,no-resolve
+DOMAIN-SUFFIX,api.mob.app.letv.com,🌏 国内媒体
+USER-AGENT,MOO*,🌏 国内媒体
+USER-AGENT,TencentMidasConnect*,🌏 国内媒体
+DOMAIN-SUFFIX,v.smtcdns.com,🌏 国内媒体
+DOMAIN-SUFFIX,vv.video.qq.com,🌏 国内媒体
+IP-CIDR,106.11.0.0/16,🌏 国内媒体,no-resolve
+
+
+final, 🐟 Final
+
+
+[rewrite_local]
+
+
+[mitm]
