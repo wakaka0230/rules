@@ -32,7 +32,7 @@ static=🇯🇵 Japan, resource-tag-regex=Mdss, server-tag-regex=(日本)|(Japan
 static=🇰🇷 Korea, resource-tag-regex=Mdss, server-tag-regex=(韩国)|(korea)|(ROK)|(South Korea)|(SouthKorea), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Korea.png
 static=🇺🇲 United States, resource-tag-regex=Mdss, server-tag-regex=(美国)|(United States)|(US)|(USA)|(UnitedStates), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/United_States.png
 static=🏳️‍🌈 Other, resource-tag-regex=Mdss, server-tag-regex=^((?!(美国)|(United States)|(US)|(USA)|(UnitedStates)|(香港)|(Hong Kong)|(HK)|(HongKong)|(hongkong)|(台湾)|(Taiwan)|(TW)|(Tai Wan)|(TaiWan)|(新加坡)|(Singapore)|(SG)|(singgapore)|(狮城)|(日本)|(Japan)|(JP)|(japan)|(韩国)|(korea)|(ROK)|(South Korea)|(SouthKorea)).)*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Area.png
-static=📲 社交媒体, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, ✍️ Proxy, DIRECT, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Telegram.png
+static=📲 电报消息, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, ✍️ Proxy, DIRECT, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Telegram.png
 static=🧩 Emby, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, ✍️ Proxy, DIRECT, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Emby.png
 static=📹 油管视频, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, ✍️ Proxy, DIRECT, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/YouTube.png
 static=🎥 Netflix, 🇸🇬 Singapore, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, ✍️ Proxy, DIRECT, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/Netflix.png
@@ -60,14 +60,14 @@ static=🐟 漏网之鱼, ✍️ Proxy, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, �
 # 无用订阅（请勿删除）
 
 [filter_remote]
-https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/airports.list, tag=机场专线, force-policy=📲 社交媒体, enabled=true
+https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/airports.list, tag=机场专线, force-policy=📲 电报消息, enabled=true
 https://limbopro.com/Adblock4limbo.list, tag=毒奶特供, force-policy=🛑 广告拦截, enabled=true
 https://raw.githubusercontent.com/NobyDa/ND-AD/master/QuantumultX/AD_Block.txt, tag=野比(4W+), force-policy=🛑 广告拦截, enabled=true
 https://raw.githubusercontent.com/NobyDa/ND-AD/master/QuantumultX/AD_Block_Plus.txt, tag=野比(6W+), force-policy=🛑 广告拦截, enabled=true
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Extra/Apple/BlockiOSUpdate.list, tag=禁止🚫🍎更新, force-policy=🛑 广告拦截, update-interval=86400, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/StreamingMedia/Video/Netflix.list, tag=Netflix, force-policy=🎥 Netflix, enabled=true
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/StreamingMedia/Streaming.list, tag=其他国外流媒体, force-policy=🌍 国外媒体, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Global.list, tag=社交媒体, force-policy=📲 社交媒体, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Global.list, tag=社交媒体, force-policy=📲 电报消息, enabled=true
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Extra/Apple/Apple.list, tag=苹果服务, force-policy=🍎 苹果服务, enabled=true
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/China.list, tag=大陆媒体, enabled=true
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Extra/ChinaIP.list, tag=GEOIP(CN), enabled=true
