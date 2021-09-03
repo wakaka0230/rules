@@ -24,14 +24,14 @@ server=8.8.8.8
 
 [policy]
 
-static=✍️ Proxy, resource-tag-regex=Mdss, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Proxy.png
-static=🇭🇰 Hong Kong, resource-tag-regex=Mdss, server-tag-regex=(香港)|(Hong Kong)|(HK)|(HongKong)|(hongkong), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Hong_Kong.png
-static=🇨🇳 Taiwan, resource-tag-regex=Mdss, server-tag-regex=(台湾)|(Taiwan)|(TW)|(Tai Wan)|(TaiWan), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/TW.png
-static=🇸🇬 Singapore, resource-tag-regex=Mdss, server-tag-regex=(新加坡)|(Singapore)|(SG)|(singgapore)|(狮城), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Singapore.png
-static=🇯🇵 Japan, resource-tag-regex=Mdss, server-tag-regex=(日本)|(Japan)|(JP)|(japan), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Japan.png
-static=🇰🇷 Korea, resource-tag-regex=Mdss, server-tag-regex=(韩国)|(korea)|(ROK)|(South Korea)|(SouthKorea), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Korea.png
-static=🇺🇲 United States, resource-tag-regex=Mdss, server-tag-regex=(美国)|(United States)|(US)|(USA)|(UnitedStates), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/United_States.png
-static=🏳️‍🌈 Other, resource-tag-regex=Mdss, server-tag-regex=^((?!(美国)|(United States)|(US)|(USA)|(UnitedStates)|(香港)|(Hong Kong)|(HK)|(HongKong)|(hongkong)|(台湾)|(Taiwan)|(TW)|(Tai Wan)|(TaiWan)|(新加坡)|(Singapore)|(SG)|(singgapore)|(狮城)|(日本)|(Japan)|(JP)|(japan)|(韩国)|(korea)|(ROK)|(South Korea)|(SouthKorea)).)*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Area.png
+static=✍️ Proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Global.png
+static=🇭🇰 Hong Kong, server-tag-regex=(香港)|(Hong Kong)|(HK)|(HongKong)|(hongkong), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Hong_Kong.png
+static=🇨🇳 Taiwan, server-tag-regex=(台湾)|(Taiwan)|(TW)|(Tai Wan)|(TaiWan), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/TW.png
+static=🇸🇬 Singapore, server-tag-regex=(新加坡)|(Singapore)|(SG)|(singgapore)|(狮城), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Singapore.png
+static=🇯🇵 Japan, server-tag-regex=(日本)|(Japan)|(JP)|(japan), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Japan.png
+static=🇰🇷 Korea, server-tag-regex=(韩国)|(korea)|(ROK)|(South Korea)|(SouthKorea), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Korea.png
+static=🇺🇲 United States, server-tag-regex=(美国)|(United States)|(US)|(USA)|(UnitedStates), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/United_States.png
+static=🏳️‍🌈 Other, server-tag-regex=^((?!(美国)|(United States)|(US)|(USA)|(UnitedStates)|(香港)|(Hong Kong)|(HK)|(HongKong)|(hongkong)|(台湾)|(Taiwan)|(TW)|(Tai Wan)|(TaiWan)|(新加坡)|(Singapore)|(SG)|(singgapore)|(狮城)|(日本)|(Japan)|(JP)|(japan)|(韩国)|(korea)|(ROK)|(South Korea)|(SouthKorea)).)*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Area.png
 static=📲 电报消息, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, ✍️ Proxy, DIRECT, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Telegram.png
 static=🧩 Emby, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, ✍️ Proxy, DIRECT, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Emby.png
 static=📹 油管视频, 🇭🇰 Hong Kong, 🇨🇳 Taiwan, 🇸🇬 Singapore, 🇯🇵 Japan, 🇰🇷 Korea, 🇺🇲 United States, 🏳️‍🌈 Other, ✍️ Proxy, DIRECT, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/YouTube.png
