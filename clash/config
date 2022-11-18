@@ -12,12 +12,12 @@
 ;设置规则标志位
 
 surge_ruleset=⏳ 各测速网站,https://raw.githubusercontent.com/Moriarty-989/listes/master/Clash/Ruleset/Speedtest.list
-surge_ruleset=🛑 广告拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
-surge_ruleset=🍃 应用净化,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+surge_ruleset=🆎 AdBlock,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+surge_ruleset=🆎 AdBlock,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
 surge_ruleset=🆎 AdBlock,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list
 surge_ruleset=🆎 AdBlock,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
 surge_ruleset=🆎 AdBlock,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list
-surge_ruleset=🛡️ 隐私防护,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list
+surge_ruleset=🆎 AdBlock,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list
 surge_ruleset=📲 电报消息,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
 surge_ruleset=🎙 Discord,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Discord.list
 surge_ruleset=🎮 Steam游戏平台,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list
@@ -35,14 +35,27 @@ surge_ruleset=🍎 苹果服务,https://raw.githubusercontent.com/ACL4SSR/ACL4SS
 surge_ruleset=Ⓜ️ 微软服务,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
 surge_ruleset=Ⓜ️ 微软云盘,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list
 surge_ruleset=🌏 国内媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
-surge_ruleset=🌍 国外媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
 surge_ruleset=🗾 日本媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Niconico.list
 surge_ruleset=🗾 日本媒体,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AbemaTV/AbemaTV.list
 surge_ruleset=🗾 日本媒体,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HuluJP/HuluJP.list
 surge_ruleset=🗾 日本媒体,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DMM/DMM.list
 surge_ruleset=🗾 日本媒体,https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Filter/U-NEXT.list
+surge_ruleset=🌍 国外媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+
 surge_ruleset=♾️ customize,https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/customize
+surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.list
+surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.list
+surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list
 surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikimedia/Wikimedia.list
+surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitch/Twitch.list
+surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list
+surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.list
+surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Notion/Notion.list
+
+
+# surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
 surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
 ;surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
 surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
@@ -83,10 +96,7 @@ custom_proxy_group=🎮 Steam游戏平台`select`[]DIRECT`[]🇭🇰 香港节�
 custom_proxy_group=🎯 全球直连`select`[]DIRECT`[]🚀 节点选择`[]🚀 手动切换
 custom_proxy_group=♾️ customize`select`[]🚀 节点选择`[]🚀 手动切换`[]🇭🇰 香港节点`[]🇨🇳 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇰🇷 韩国节点`[]🇺🇲 美国节点`[]🏳️‍🌈 其他节点`[]DIRECT
 custom_proxy_group=🐟 漏网之鱼`select`[]🚀 节点选择`[]🚀 手动切换`[]🇭🇰 香港节点`[]🇨🇳 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇰🇷 韩国节点`[]🇺🇲 美国节点`[]🏳️‍🌈 其他节点`[]DIRECT
-custom_proxy_group=🛑 广告拦截`select`[]REJECT`[]DIRECT
-custom_proxy_group=🍃 应用净化`select`[]REJECT`[]DIRECT
 custom_proxy_group=🆎 AdBlock`select`[]REJECT`[]DIRECT
-custom_proxy_group=🛡️ 隐私防护`select`[]REJECT`[]DIRECT
 
 ;设置分组标志位
 
