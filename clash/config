@@ -9,6 +9,31 @@
 ;增强中国IP段：支持
 ;增强国外GFW：支持
 
+;tun设置
+
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - 198.18.0.2:53
+  auto-route: true
+  auto-detect-interface: true
+
+;dns设置
+
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  listen: 127.0.0.1:53
+  nameserver:
+  - 8.8.8.8 # 真实请求DNS，可多设置几个
+  - 114.114.114.114
+  - 1.1.1.1
+  fake-ip-filter:
+    - "dns.msftncsi.com"
+    - "www.msftncsi.com"
+    - "www.msftconnecttest.com"
+
 ;设置规则标志位
 
 ruleset=⏳ 各测速网站,https://raw.githubusercontent.com/Moriarty-989/listes/master/Clash/Ruleset/Speedtest.list
