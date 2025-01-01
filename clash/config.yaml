@@ -97,15 +97,15 @@ proxy-providers:
 
 # 锚点 - 节点筛选组
 All: &All {type: select, proxies: [🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇺🇲 美国节点, 🇬🇧 英国节点, 🇩🇪 德国节点, 🏳️‍🌈 其他节点, 1️⃣NET 1, 2️⃣NET 2, 3️⃣NET 3, 4️⃣NET 4, DIRECT]}
-FilterHK: &FilterHK `香港|Hong Kong|HK|HongKong|hongkong|HKG|港`
-FilterJP: &FilterJP `japan|JPN|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|日|JP|Japan`
-FilterTW: &FilterTW `台湾|台灣|Tai Wan|TWN|台|新北|彰化|TW|Taiwan`
-FilterKR: &FilterKR `韩国|韓國|korea|South Korea|SouthKorea|KR|Korea|KOR|首尔|韩|韓`
-FilterSG: &FilterSG `singgapore|新加坡|坡|狮城|SGP|SG|Singapore`
-FilterUS: &FilterUS `美|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|USA|United States|UnitedStates`
-FilterUK: &FilterUK `United Kingdom|英|伦敦|UK|Britain`
-FilterDE: &FilterDE `Germany|Berlin|DEU|德|Frankfurt|法兰克福|柏林`
-FilterOther: &FilterOther `^(?!.*(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|日|JP|Japan))(?!.*(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|USA|United States))(?!.*(KR|Korea|KOR|首尔|韩|韓))(?!.*(United Kingdom|英|伦敦|UK|Britain))(?!.*(Germany|Berlin|DEU|德|Frankfurt|法兰克福|柏林))(?!.*(新加坡|坡|狮城|SGP|Singapore))(?!.*(台|新北|彰化|TW|Taiwan))(?!.*(港|HK|Hong Kong))(?!.*(时间|剩余)).*`
+FilterHK: &FilterHK '香港|Hong Kong|HK|HongKong|hongkong|HKG|港'
+FilterJP: &FilterJP 'japan|JPN|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|日|JP|Japan'
+FilterTW: &FilterTW '台湾|台灣|Tai Wan|TWN|台|新北|彰化|TW|Taiwan'
+FilterKR: &FilterKR '韩国|韓國|korea|South Korea|SouthKorea|KR|Korea|KOR|首尔|韩|韓'
+FilterSG: &FilterSG 'singgapore|新加坡|坡|狮城|SGP|SG|Singapore'
+FilterUS: &FilterUS '美|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|USA|United States|UnitedStates'
+FilterUK: &FilterUK 'United Kingdom|英|伦敦|UK|Britain'
+FilterDE: &FilterDE 'Germany|Berlin|DEU|德|Frankfurt|法兰克福|柏林'
+FilterOther: &FilterOther '^(?!.*(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|日|JP|Japan))(?!.*(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|USA|United States))(?!.*(KR|Korea|KOR|首尔|韩|韓))(?!.*(United Kingdom|英|伦敦|UK|Britain))(?!.*(Germany|Berlin|DEU|德|Frankfurt|法兰克福|柏林))(?!.*(新加坡|坡|狮城|SGP|Singapore))(?!.*(台|新北|彰化|TW|Taiwan))(?!.*(港|HK|Hong Kong))(?!.*(时间|剩余)).*'
 
 # FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
 
@@ -122,15 +122,15 @@ proxies:
 proxy-groups: 
   - {name: 🚀 节点选择, type: select, proxies: [🚀 手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇺🇲 美国节点, 🇬🇧 英国节点, 🇩🇪 德国节点, 🏳️‍🌈 其他节点, DIRECT]}
 
-  - {name: 🇭🇰 香港节点, type: select, <<: filter: *FilterHK}
-  - {name: 🇯🇵 日本节点, type: select, <<: filter: *FilterJP}
-  - {name: 🇨🇳 台湾节点, type: select, <<: filter: *FilterTW}
-  - {name: 🇰🇷 韩国节点, type: select, <<: filter: *FilterKR}
-  - {name: 🇸🇬 新加坡节点, type: select, <<: filter: *FilterSG}
-  - {name: 🇺🇸 美国节点, type: select, <<: filter: *FilterUS}
-  - {name: 🇬🇧 英国节点, type: select, <<: filter: *FilterUK}
-  - {name: 🇩🇪 德国节点, type: select, <<: filter: *FilterDE}
-  - {name: 🇩🇪 🏳️‍🌈 其他节点, type: select, <<: filter: *FilterOther}
+  - {name: 🇭🇰 香港节点, type: select, <<: *FilterHK}
+  - {name: 🇯🇵 日本节点, type: select, <<: *FilterJP}
+  - {name: 🇨🇳 台湾节点, type: select, <<: *FilterTW}
+  - {name: 🇰🇷 韩国节点, type: select, <<: *FilterKR}
+  - {name: 🇸🇬 新加坡节点, type: select, <<: *FilterSG}
+  - {name: 🇺🇸 美国节点, type: select, <<: *FilterUS}
+  - {name: 🇬🇧 英国节点, type: select, <<: *FilterUK}
+  - {name: 🇩🇪 德国节点, type: select, <<: *FilterDE}
+  - {name: 🇩🇪 🏳️‍🌈 其他节点, type: select, <<: *FilterOther}
   - {name: 1️⃣NET 1, type: select, ^(?!.*(时间|剩余)).*}
   - {name: 2️⃣NET 2, type: select, ^(?!.*(时间|剩余)).*}
   - {name: 3️⃣NET 3, type: select, ^(?!.*(时间|剩余)).*}
