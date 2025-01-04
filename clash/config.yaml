@@ -1,0 +1,463 @@
+# clash改动版本
+# 日期：2024-1-2
+# 配置说明：https://github.com/MetaCubeX/mihomo/blob/Alpha/docs/config.yaml
+# 原配置作者：https://github.com/Rabbit-Spec
+# 适用版本：所有使用 Mihomo 内核的程序
+
+port: 7890
+socks-port: 7891
+mixed-port: 7892
+redir-port: 7893
+tproxy-port: 7894
+
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: strict
+global-client-fingerprint: chrome
+
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+udp: true
+
+external-controller: 0.0.0.0:9097
+# external-ui: ui
+# external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
+
+geodata-mode: false
+geodata-loader: standard
+geo-auto-update: true # 是否自动更新 geodata
+geo-update-interval: 24 # 更新间隔，单位：小时
+geox-url:
+  geoip: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat'
+  geosite: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'
+  mmdb: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb'
+  asn: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb'
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+tun:
+  enable: true
+  stack: mixed
+  dns-hijack:
+    - any:53
+  auto-route: true
+  auto-detect-interface: true
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 28.0.0.1/8
+  fake-ip-filter:
+    #- "*"
+    - "*.lan"
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 114.114.114.114
+    - 8.8.8.8
+  nameserver:
+    - 114.114.114.114 # default value
+    - 8.8.8.8 # default value
+    - https://223.5.5.5/dns-query#h3=true
+    - https://223.6.6.6/dns-query#h3=true
+
+# 锚点 - 节点订阅的参数 [每24小时更新一次订阅节点，# 每 60 秒一次健康检查]
+NodeParam: &NodeParam {type: http, interval: 86400} # , health-check: {enable: true, url: 'http://www.google.com/generate_204', interval: 300}}
+
+# 锚点 - 节点订阅
+proxy-providers: 
+  订阅:
+    url: ''
+    <<: *NodeParam
+    path: './proxy_provider/订阅.yaml'
+
+
+# 锚点 - 节点筛选组
+AllNodes: &AllNodes {type: select, include-all-providers: true}
+All: &All {type: select, proxies: [ 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇩🇪 德国节点, 其他节点, NET 1, NET 2, NET 3, NET 4, DIRECT]}
+
+FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|Hong Kong|HK|HongKong|hongkong|HKG|港)).*$'
+FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|japan|JPN|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|日|JP|Japan)).*$'
+FilterTW: &FilterTW '^(?=.*((?i)台湾|台灣|Tai Wan|TWN|台|新北|彰化|TW|Taiwan)).*$'
+FilterKR: &FilterKR '^(?=.*((?i)🇰🇷|韩国|韓國|korea|South Korea|SouthKorea|KR|Korea|KOR|首尔|韩|韓)).*$'
+FilterSG: &FilterSG '^(?=.*((?i)🇸🇬|singgapore|新加坡|坡|狮城|SGP|SG|Singapore)).*$'
+FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|USA|United States|UnitedStates)).*$'
+FilterUK: &FilterUK '^(?=.*((?i)🇬🇧|United Kingdom|英|伦敦|UK|GB|Britain)).*$'
+FilterDE: &FilterDE '^(?=.*((?i)🇩🇪|Germany|Berlin|DEU|德|Frankfurt|法兰克福|柏林)).*$'
+FilterOther: &FilterOther '^(?!.*(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|日|JP|Japan|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|USA|United States|KR|Korea|KOR|首尔|韩|韓|United Kingdom|英|伦敦|UK|Britain|Germany|Berlin|DEU|德|Frankfurt|法兰克福|柏林|新加坡|坡|狮城|SGP|Singapore|台|新北|彰化|TW|Taiwan|港|HK|Hong Kong|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入))'
+
+FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
+
+# 锚点 - 故障转移参数 [每 10 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+# FallBack: &FallBack {type: fallback, interval: 10, lazy: true, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+
+
+# 策略组
+proxy-groups: 
+  - {name: 节点选择, type: select, proxies: [手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇩🇪 德国节点, 其他节点, DIRECT]}
+  - {name: 手动切换, <<: *AllNodes}
+  - {name: 🇭🇰 香港节点, <<: *AllNodes, filter: *FilterHK}
+  - {name: 🇯🇵 日本节点, <<: *AllNodes, filter: *FilterJP}
+  - {name: 🇨🇳 台湾节点, <<: *AllNodes, filter: *FilterTW}
+  - {name: 🇰🇷 韩国节点, <<: *AllNodes, filter: *FilterKR}
+  - {name: 🇸🇬 新加坡节点, <<: *AllNodes, filter: *FilterSG}
+  - {name: 🇺🇸 美国节点, <<: *AllNodes, filter: *FilterUS}
+  - {name: 🇬🇧 英国节点, <<: *AllNodes, filter: *FilterUK}
+  - {name: 🇩🇪 德国节点, <<: *AllNodes, filter: *FilterDE}
+  - {name: 其他节点, <<: *AllNodes, filter: *FilterOther}
+  - {name: NET 1, <<: *AllNodes, filter: *FilterAll}
+  - {name: NET 2, <<: *AllNodes, filter: *FilterAll}
+  - {name: NET 3, <<: *AllNodes, filter: *FilterAll}
+  - {name: NET 4, <<: *AllNodes, filter: *FilterAll}
+  - {name: TikTok, <<: *All}
+  - {name: Netflix, <<: *All}
+  - {name: Telegram,  <<: *All}
+  - {name: Twitch, <<: *All}
+  - {name: Discord, <<: *All}
+  - {name: YouTube, <<: *All}
+  - {name: 哔哩哔哩, <<: *All}
+  - {name: 国外媒体, <<: *All}
+  - {name: 国内媒体, <<: *All}
+  - {name: 日本媒体, <<: *All}
+  - {name: 各测速网站, <<: *All}
+  - {name: Google, <<: *All}
+  - {name: 微软云盘, <<: *All}
+  - {name: 微软服务, <<: *All}
+  - {name: Apple, <<: *All}
+  - {name: Steam, <<: *All}
+  - {name: 交易所, <<: *All}
+  - {name: PayPal, <<: *All}
+  - {name: Redotpay, <<: *All}
+  - {name: customize_oversea, <<: *All}
+  - {name: customize_domestic, <<: *All}
+  - {name: PT&BT, <<: *All}
+  - {name: Emby, <<: *All}
+  - {name: 漏网之鱼, <<: *All}
+  - {name: 全球直连, <<: *All}
+  - {name: AdBlock, type: select, proxies: [手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇩🇪 德国节点, 其他节点, NET 1, NET 2, NET 3, NET 4, DIRECT, REJECT]}
+
+
+# 锚点 - 规则参数 [每天更新一次订阅规则，更新规则时使用直连策略]
+RuleSet: &RuleSet {type: http, behavior: classical, interval: 86400, format: text, proxy: 漏网之鱼}
+
+# 订阅规则
+rule-providers:
+  测速网站:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/Moriarty-989/listes/master/Clash/Ruleset/Speedtest.list'
+    path: './RuleSet/测速网站.text'
+
+  AdBlock:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list'
+    path: './RuleSet/AdBlock.text'
+  AdBlock1:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list'
+    path: './RuleSet/AdBlock1.text'
+  AdBlock2:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list'
+    path: './RuleSet/AdBlock2.text'
+  AdBlock3:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list'
+    path: './RuleSet/AdBlock3.text'
+  AdBlock4:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list'
+    path: './RuleSet/AdBlock4.text'
+
+  customize_oversea:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/customize_oversea.list'
+    path: './RuleSet/customize_oversea.text'
+
+  customize_domestic:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/customize_domestic.list'
+    path: './RuleSet/customize_domestic.text'
+
+  Telegram:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list'
+    path: './RuleSet/Telegram.text'
+
+  Discord:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.list'
+    path: './RuleSet/Discord.text'
+
+  Steam:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.list'
+    path: './RuleSet/Steam.text'
+  Steam1:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/steam.list'
+    path: './RuleSet/Steam1.text'
+
+  Binance:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Binance/Binance.list'
+    path: './RuleSet/Binance.text'
+  OKX:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OKX/OKX.list'
+    path: './RuleSet/OKX.text'
+  OKX1:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/heads/main/rules/OKX.list'
+    path: './RuleSet/OKX1.text'
+  Metamask:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/Metamask.list'
+    path: './RuleSet/Metamask.text'
+  Binance1:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/Binance.list'
+    path: './RuleSet/Binance1.text'
+  Trustwallet:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/Trustwallet.list'
+    path: './RuleSet/Trustwallet.text'
+  Bybit:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/Bybit.list'
+    path: './RuleSet/Bybit.text'
+
+  PayPal:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.list'
+    path: './RuleSet/PayPal.text'
+
+  Redotpay:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/Redotpay.list'
+    path: './RuleSet/Redotpay.text'
+
+  哔哩哔哩:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.list'
+    path: './RuleSet/哔哩哔哩.text'
+
+  YouTube:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list'
+    path: './RuleSet/YouTube.text'
+
+  Netflix:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list'
+    path: './RuleSet/Netflix.text'
+
+  TikTok:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.list'
+    path: './RuleSet/TikTok.text'
+
+  Twitch:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitch/Twitch.list'
+    path: './RuleSet/Twitch.text'
+
+  Google:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleSearch/GoogleSearch.list'
+    path: './RuleSet/Google.text'
+  Google1:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleVoice/GoogleVoice.list'
+    path: './RuleSet/Google1.text'
+  Google2:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list'
+    path: './RuleSet/Google2.text'
+  Google3:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list'
+    path: './RuleSet/Google3.text'
+
+
+  Apple:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list'
+    path: './RuleSet/Apple.text'
+
+  微软云盘:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.list'
+    path: './RuleSet/微软云盘.text'
+  
+  微软服务:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list'
+    path: './RuleSet/微软服务.text'
+
+  国内媒体:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list'
+    path: './RuleSet/国内媒体.text'
+
+  日本媒体:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Niconico/Niconico.list'
+    path: './RuleSet/日本媒体.text'
+  日本媒体1:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AbemaTV/AbemaTV.list'
+    path: './RuleSet/日本媒体1.text'
+  日本媒体2:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HuluJP/HuluJP.list'
+    path: './RuleSet/日本媒体2.text'
+  日本媒体3:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DMM/DMM.list'
+    path: './RuleSet/日本媒体3.text'
+  日本媒体4:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Filter/U-NEXT.list'
+    path: './RuleSet/日本媒体4.text'
+
+  国外媒体:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list'
+    path: './RuleSet/国外媒体.text'
+
+  PT&BT:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PrivateTracker/PrivateTracker.list'
+    path: './RuleSet/日本媒体1.text'
+
+  Emby:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/Emby.list'
+    path: './RuleSet/Emby.text'
+
+  节点选择:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.list'
+    path: './RuleSet/节点选择.text'
+  节点选择1:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.list'
+    path: './RuleSet/节点选择1.text'
+  节点选择2:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list'
+    path: './RuleSet/节点选择2.text'
+  节点选择3:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikimedia/Wikimedia.list'
+    path: './RuleSet/节点选择3.text'
+  节点选择4:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list'
+    path: './RuleSet/节点选择4.text'
+  节点选择5:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.list'
+    path: './RuleSet/节点选择5.text'
+  节点选择6:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Notion/Notion.list'
+    path: './RuleSet/节点选择6.text'
+  节点选择7:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/US-MAIN.list'
+    path: './RuleSet/节点选择7.text'
+  节点选择8:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list'
+    path: './RuleSet/节点选择8.text'
+
+  全球直连:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list'
+    path: './RuleSet/全球直连.text'
+  全球直连1:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list'
+    path: './RuleSet/全球直连1.text'
+  全球直连2:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list'
+    path: './RuleSet/全球直连2.text'
+  全球直连3:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list'
+    path: './RuleSet/全球直连3.text'
+  全球直连4:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list'
+    path: './RuleSet/全球直连4.text'
+
+
+# 分流规则指向
+rules:
+ - RULE-SET,测速网站,各测速网站
+ - RULE-SET,AdBlock,AdBlock
+ - RULE-SET,AdBlock1,AdBlock
+ - RULE-SET,AdBlock2,AdBlock
+ - RULE-SET,AdBlock3,AdBlock
+ - RULE-SET,AdBlock4,AdBlock
+ - RULE-SET,customize_oversea,customize_oversea
+ - RULE-SET,customize_domestic,customize_domestic
+ - RULE-SET,Telegram,Telegram
+ - RULE-SET,Discord,Discord
+ - RULE-SET,Steam,Steam
+ - RULE-SET,Steam1,Steam
+ - RULE-SET,Binance,交易所
+ - RULE-SET,Binance1,交易所
+ - RULE-SET,OKX,交易所
+ - RULE-SET,OKX1,交易所
+ - RULE-SET,Metamask,交易所
+ - RULE-SET,Trustwallet,交易所
+ - RULE-SET,Bybit,交易所
+ - RULE-SET,PayPal,PayPal
+ - RULE-SET,Redotpay,Redotpay
+ - RULE-SET,哔哩哔哩,哔哩哔哩
+ - RULE-SET,YouTube,YouTube
+ - RULE-SET,Netflix,Netflix
+ - RULE-SET,TikTok,TikTok
+ - RULE-SET,Twitch,Twitch
+ - RULE-SET,Google,Google
+ - RULE-SET,Google1,Google
+ - RULE-SET,Google2,Google
+ - RULE-SET,Google3,Google
+ - RULE-SET,Apple,Apple
+ - RULE-SET,微软云盘,微软云盘
+ - RULE-SET,微软服务,微软服务
+ - RULE-SET,国内媒体,国内媒体
+ - RULE-SET,日本媒体,日本媒体
+ - RULE-SET,日本媒体1,日本媒体
+ - RULE-SET,日本媒体2,日本媒体
+ - RULE-SET,日本媒体3,日本媒体
+ - RULE-SET,日本媒体4,日本媒体
+ - RULE-SET,国外媒体,国外媒体
+ - RULE-SET,PT&BT,PT&BT
+ - RULE-SET,Emby,Emby
+ - RULE-SET,节点选择,节点选择
+ - RULE-SET,节点选择1,节点选择
+ - RULE-SET,节点选择2,节点选择
+ - RULE-SET,节点选择3,节点选择
+ - RULE-SET,节点选择4,节点选择
+ - RULE-SET,节点选择5,节点选择
+ - RULE-SET,节点选择6,节点选择
+ - RULE-SET,节点选择7,节点选择
+ - RULE-SET,节点选择8,节点选择
+ - RULE-SET,全球直连,全球直连
+ - RULE-SET,全球直连1,全球直连
+ - RULE-SET,全球直连2,全球直连
+ - RULE-SET,全球直连3,全球直连
+ - RULE-SET,全球直连4,全球直连
+
+ - GEOIP,CN,DIRECT
+ - MATCH,漏网之鱼
