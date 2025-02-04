@@ -138,6 +138,7 @@ proxy-groups:
   - {name: customize_domestic, <<: *All}
   - {name: PT&BT, <<: *All}
   - {name: Emby, <<: *All}
+  - {name: Cloudflare, <<: *All}
   - {name: 漏网之鱼, <<: *All}
   - {name: 全球直连, <<: *All}
   - {name: AdBlock, type: select, proxies: [手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇩🇪 德国节点, 其他节点, NET 1, NET 2, NET 3, NET 4, DIRECT, REJECT]}
@@ -341,6 +342,12 @@ rule-providers:
     url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/Emby.list'
     path: './RuleSet/Emby.text'
 
+  Cloudflare:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflare/Cloudflare.list'
+    path: './RuleSet/Cloudflare.text'
+
+
   节点选择:
     <<: *RuleSet
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.list'
@@ -444,6 +451,7 @@ rules:
  - RULE-SET,国外媒体,国外媒体
  - RULE-SET,PT&BT,PT&BT
  - RULE-SET,Emby,Emby
+ - RULE-SET,Cloudflare,Cloudflare
  - RULE-SET,节点选择,节点选择
  - RULE-SET,节点选择1,节点选择
  - RULE-SET,节点选择2,节点选择
