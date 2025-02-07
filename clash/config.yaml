@@ -326,11 +326,19 @@ rule-providers:
     <<: *RuleSet
     url: 'https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Filter/U-NEXT.list'
     path: './RuleSet/日本媒体4.text'
+  日本媒体5:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules/main/rules/jp.list'
+    path: './RuleSet/日本媒体5.text'
 
   国外媒体:
     <<: *RuleSet
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list'
     path: './RuleSet/国外媒体.text'
+  国外媒体1:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules/main/rules/us.list'
+    path: './RuleSet/国外媒体1.text'
 
   PT&BT:
     <<: *RuleSet
@@ -448,7 +456,9 @@ rules:
  - RULE-SET,日本媒体2,日本媒体
  - RULE-SET,日本媒体3,日本媒体
  - RULE-SET,日本媒体4,日本媒体
+ - RULE-SET,日本媒体5,日本媒体
  - RULE-SET,国外媒体,国外媒体
+ - RULE-SET,国外媒体1,国外媒体
  - RULE-SET,PT&BT,PT&BT
  - RULE-SET,Emby,Emby
  - RULE-SET,Cloudflare,Cloudflare
