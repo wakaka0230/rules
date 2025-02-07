@@ -388,10 +388,6 @@ rule-providers:
     <<: *RuleSet
     url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/US-MAIN.list'
     path: './RuleSet/节点选择7.text'
-  节点选择8:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list'
-    path: './RuleSet/节点选择8.text'
 
   全球直连:
     <<: *RuleSet
@@ -470,7 +466,6 @@ rules:
  - RULE-SET,节点选择5,节点选择
  - RULE-SET,节点选择6,节点选择
  - RULE-SET,节点选择7,节点选择
- - RULE-SET,节点选择8,节点选择
  - RULE-SET,全球直连,全球直连
  - RULE-SET,全球直连1,全球直连
  - RULE-SET,全球直连2,全球直连
