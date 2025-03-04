@@ -115,6 +115,8 @@ proxy-groups:
   - {name: NET 2, <<: *AllNodes, filter: *FilterAll}
   - {name: NET 3, <<: *AllNodes, filter: *FilterAll}
   - {name: NET 4, <<: *AllNodes, filter: *FilterAll}
+  - {name: NET 5, <<: *AllNodes, filter: *FilterAll}
+  - {name: NET 6, <<: *AllNodes, filter: *FilterAll}
   - {name: TikTok, <<: *All}
   - {name: Netflix, <<: *All}
   - {name: Telegram,  <<: *All}
