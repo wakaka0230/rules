@@ -80,7 +80,7 @@ proxy-providers:
 
 # 锚点 - 节点筛选组
 AllNodes: &AllNodes {type: select, include-all-providers: true}
-All: &All {type: select, proxies: [ 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇩🇪 德国节点, 其他节点, NET 1, NET 2, NET 3, NET 4, DIRECT]}
+All: &All {type: select, proxies: [ 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇩🇪 德国节点, 其他节点, NET 1, NET 2, NET 3, NET 4, NET 5, NET 6, DIRECT]}
 
 FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|Hong Kong|HK|HongKong|hongkong|HKG|港)).*$'
 FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|japan|JPN|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|日|JP|Japan)).*$'
