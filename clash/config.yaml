@@ -216,7 +216,7 @@ rule-providers:
     path: './RuleSet/OKX.text'
   OKX1:
     <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/wakaka0230/heads/main/rules/OKX.list'
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules/main/rules/OKX.list'
     path: './RuleSet/OKX1.text'
   Metamask:
     <<: *RuleSet
