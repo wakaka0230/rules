@@ -60,16 +60,14 @@ dns:
     - "+.local"
   nameserver-policy:
     "geosite:cn":
+      - https://222.85.85.85/dns-query
       - https://223.5.5.5/dns-query
-      - https://223.6.6.6/dns-query
       - https://120.53.53.53/dns-query
   nameserver:
     - "https://dns.cloudflare.com/dns-query"
-    - "https://dns.sb/dns-query"
     - "https://dns.google/dns-query"
-    - "https://public.dns.iij.jp/dns-query"
-    - "https://jp.tiar.app/dns-query"
-    - "https://jp.tiarap.org/dns-query"
+    - "https://dns.quad9.net/dns-query"
+
 
 # 锚点 - 节点订阅的参数 [每24小时更新一次订阅节点，# 每 60 秒一次健康检查]
 NodeParam: &NodeParam {type: http, interval: 86400} # , health-check: {enable: true, url: 'http://www.google.com/generate_204', interval: 300}}
