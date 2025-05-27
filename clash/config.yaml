@@ -443,7 +443,6 @@ rules:
  - RULE-SET,AdBlock2,AdBlock
  - RULE-SET,AdBlock3,AdBlock
  - RULE-SET,AdBlock4,AdBlock
- - RULE-SET,customize_oversea,customize_oversea
  - RULE-SET,customize_domestic,customize_domestic
  - RULE-SET,Telegram,Telegram
  - RULE-SET,Discord,Discord
