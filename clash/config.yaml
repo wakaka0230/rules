@@ -179,10 +179,30 @@ rule-providers:
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list'
     path: './RuleSet/AdBlock4.text'
 
-  customize_oversea:
+  hk:
     <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/customize_oversea.list'
-    path: './RuleSet/customize_oversea.text'
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/hk.list'
+    path: './RuleSet/hk.text'
+
+  us:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/us.list'
+    path: './RuleSet/us.text'
+ 
+  jp:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/jp.list'
+    path: './RuleSet/jp.text'
+
+  sg:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/sg.list'
+    path: './RuleSet/sg.text'
+
+  cn:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/cn.list'
+    path: './RuleSet/cn.text'
 
   customize_domestic:
     <<: *RuleSet
@@ -475,6 +495,12 @@ rules:
  - RULE-SET,全球直连2,全球直连
  - RULE-SET,全球直连3,全球直连
  - RULE-SET,全球直连4,全球直连
+
+ - RULE-SET,hk,🇭🇰 香港节点
+ - RULE-SET,us,🇺🇸 美国节点
+ - RULE-SET,jp,🇯🇵 日本节点
+ - RULE-SET,sg,🇸🇬 新加坡节点
+ - RULE-SET,cn,DIRECT
 
  - GEOIP,CN,DIRECT
  - MATCH,漏网之鱼
