@@ -171,22 +171,17 @@ rule-providers:
     <<: *RuleSet
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list'
     path: './RuleSet/AdBlock.text'
+  
+  #无用待定
+  #AdBlock2:
+  #  <<: *RuleSet
+  #  url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list'
+  #  path: './RuleSet/AdBlock2.text'
+
   AdBlock1:
     <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/EasyPrivacy/EasyPrivacy.list'
     path: './RuleSet/AdBlock1.text'
-  AdBlock2:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list'
-    path: './RuleSet/AdBlock2.text'
-  AdBlock3:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list'
-    path: './RuleSet/AdBlock3.text'
-  AdBlock4:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list'
-    path: './RuleSet/AdBlock4.text'
 
   hk:
     <<: *RuleSet
@@ -417,10 +412,7 @@ rule-providers:
     <<: *RuleSet
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Notion/Notion.list'
     path: './RuleSet/节点选择6.text'
-  节点选择7:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/wakaka0230/rules.conf/main/rules/US-MAIN.list'
-    path: './RuleSet/节点选择7.text'
+
 
   全球直连:
     <<: *RuleSet
@@ -448,10 +440,7 @@ rule-providers:
 rules:
  - RULE-SET,测速网站,各测速网站
  - RULE-SET,AdBlock,AdBlock
- - RULE-SET,AdBlock1,AdBlock
- - RULE-SET,AdBlock2,AdBlock
- - RULE-SET,AdBlock3,AdBlock
- - RULE-SET,AdBlock4,AdBlock
+ - RULE-SET,AdBlock1,AdBlock                           
  - RULE-SET,customize_domestic,customize_domestic
  - RULE-SET,Telegram,Telegram
  - RULE-SET,Discord,Discord
@@ -497,7 +486,6 @@ rules:
  - RULE-SET,节点选择4,节点选择
  - RULE-SET,节点选择5,节点选择
  - RULE-SET,节点选择6,节点选择
- - RULE-SET,节点选择7,节点选择
  - RULE-SET,全球直连,全球直连
  - RULE-SET,全球直连1,全球直连
  - RULE-SET,全球直连2,全球直连
