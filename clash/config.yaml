@@ -88,10 +88,9 @@ proxy-providers:
     <<: *NodeParam
     path: './proxy_provider/订阅.yaml'
 
-
 # 锚点 - 节点筛选组
 AllNodes: &AllNodes {type: select, include-all-providers: true}
-All: &All {type: select, proxies: [ 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇩🇪 德国节点, 其他节点, NET 1, NET 2, NET 3, NET 4, NET 5, NET 6, DIRECT]}
+All: &All {type: select, proxies: [手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇩🇪 德国节点, 其他节点, NET 1, NET 2, NET 3, NET 4, OWN-SG, DIRECT]}
 
 FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|Hong Kong|HK|HongKong|hongkong|HKG|港)).*$'
 FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|japan|JPN|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|日|JP|Japan)).*$'
@@ -111,7 +110,7 @@ FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客�
 
 # 策略组
 proxy-groups: 
-  - {name: 节点选择, type: select, proxies: [手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇩🇪 德国节点, 其他节点, DIRECT]}
+  - {name: 🛰Main, <<: *All}
   - {name: 手动切换, <<: *AllNodes}
   - {name: 🇭🇰 香港节点, <<: *AllNodes, filter: *FilterHK}
   - {name: 🇯🇵 日本节点, <<: *AllNodes, filter: *FilterJP}
@@ -124,10 +123,10 @@ proxy-groups:
   - {name: 其他节点, <<: *AllNodes, filter: *FilterOther}
   - {name: NET 1, <<: *AllNodes, filter: *FilterAll}
   - {name: NET 2, <<: *AllNodes, filter: *FilterAll}
-  - {name: NET 3, <<: *AllNodes, filter: *FilterAll}
-  - {name: NET 4, <<: *AllNodes, filter: *FilterAll}
-  - {name: NET 5, <<: *AllNodes, filter: *FilterAll}
-  - {name: NET 6, <<: *AllNodes, filter: *FilterAll}
+  - {name: NET 3, type: select, use: [*provider*]}
+  - {name: NET 4, type: select, use: [*provider*]}
+  - {name: Relay-SG, type: select, proxies: [ 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 其他节点, NET 1, NET 2, NET 3, DIRECT]}
+  - {name: OWN-SG, type: select, dialer-proxy: Relay-SG, use: [*provider*]}
   - {name: TikTok, <<: *All}
   - {name: Netflix, <<: *All}
   - {name: Telegram,  <<: *All}
@@ -154,10 +153,10 @@ proxy-groups:
   - {name: Cloudflare, <<: *All}
   - {name: 漏网之鱼, <<: *All}
   - {name: 全球直连, <<: *All}
-  - {name: AdBlock, type: select, proxies: [手动切换, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇩🇪 德国节点, 其他节点, NET 1, NET 2, NET 3, NET 4, DIRECT, REJECT]}
+  - {name: AdBlock, type: select, proxies: [漏网之鱼, DIRECT, REJECT]}
 
 
-# 锚点 - 规则参数 [每天更新一次订阅规则，更新规则时使用直连策略]
+# 锚点 - 规则参数 [每天更新一次订阅规则，更新规则时使用代理策略]
 RuleSet: &RuleSet {type: http, behavior: classical, interval: 86400, format: text, proxy: 漏网之鱼}
 
 # 订阅规则
@@ -479,13 +478,13 @@ rules:
  - RULE-SET,PT&BT,PT&BT
  - RULE-SET,Emby,Emby
  - RULE-SET,Cloudflare,Cloudflare
- - RULE-SET,节点选择,节点选择
- - RULE-SET,节点选择1,节点选择
- - RULE-SET,节点选择2,节点选择
- - RULE-SET,节点选择3,节点选择
- - RULE-SET,节点选择4,节点选择
- - RULE-SET,节点选择5,节点选择
- - RULE-SET,节点选择6,节点选择
+ - RULE-SET,节点选择,🛰Main
+ - RULE-SET,节点选择1,🛰Main
+ - RULE-SET,节点选择2,🛰Main
+ - RULE-SET,节点选择3,🛰Main
+ - RULE-SET,节点选择4,🛰Main
+ - RULE-SET,节点选择5,🛰Main
+ - RULE-SET,节点选择6,🛰Main
  - RULE-SET,全球直连,全球直连
  - RULE-SET,全球直连1,全球直连
  - RULE-SET,全球直连2,全球直连
