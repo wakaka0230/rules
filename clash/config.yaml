@@ -123,26 +123,25 @@ proxy-groups:
   - {name: 其他节点, <<: *AllNodes, filter: *FilterOther}
   - {name: NET 1, <<: *AllNodes, filter: *FilterAll}
   - {name: NET 2, <<: *AllNodes, filter: *FilterAll}
-  - {name: NET 3, type: select, use: [*provider*]}
-  - {name: NET 4, type: select, use: [*provider*]}
+  - {name: NET 3, type: select, use: [Z1]}
+  - {name: NET 4, type: select, use: [ZNnr, Zmyown]}
   - {name: Relay-SG, type: select, proxies: [ 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 其他节点, NET 1, NET 2, NET 3, DIRECT]}
-  - {name: OWN-SG, type: select, dialer-proxy: Relay-SG, use: [*provider*]}
+  - {name: OWN-SG, type: select, dialer-proxy: Relay-SG, use: [Zmyown-SG]}
   - {name: TikTok, <<: *All}
   - {name: Netflix, <<: *All}
   - {name: Telegram,  <<: *All}
   - {name: Twitch, <<: *All}
   - {name: Discord, <<: *All}
   - {name: YouTube, <<: *All}
+  - {name: Google, <<: *All}
+  - {name: Apple, <<: *All}
+  - {name: Steam, <<: *All}
+  - {name: 微软云盘, <<: *All}
+  - {name: 微软服务, <<: *All}
   - {name: 哔哩哔哩, <<: *All}
   - {name: 国外媒体, <<: *All}
   - {name: 国内媒体, <<: *All}
   - {name: 日本媒体, <<: *All}
-  - {name: 各测速网站, <<: *All}
-  - {name: Google, <<: *All}
-  - {name: 微软云盘, <<: *All}
-  - {name: 微软服务, <<: *All}
-  - {name: Apple, <<: *All}
-  - {name: Steam, <<: *All}
   - {name: 交易所, <<: *All}
   - {name: PayPal, <<: *All}
   - {name: Redotpay, <<: *All}
@@ -150,6 +149,7 @@ proxy-groups:
   - {name: customize_domestic, <<: *All}
   - {name: PT&BT, <<: *All}
   - {name: Emby, <<: *All}
+  - {name: 各测速网站, <<: *All}
   - {name: Cloudflare, <<: *All}
   - {name: 漏网之鱼, <<: *All}
   - {name: 全球直连, <<: *All}
